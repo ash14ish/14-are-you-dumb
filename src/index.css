@@ -39,11 +39,6 @@ h1{
   width: 80px;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #F082AC;
-}
-
 .check_again_btn{
   width: 170px;
   padding: 12px 9px;
@@ -57,7 +52,7 @@ h1{
 
 .no_btn{
   position: absolute;
-  transition: 300ms ease-in-out;
+  transition: 600ms ease-in-out;
   display: block;
 }
 
