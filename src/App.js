@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
 
-function App() {
+const App = () => {
+  const [yCoordinate, setYCoordinate] = useState(0)
+  const [xCoordinate, setXCoordinate] = useState(50)
+  const [affirmation,setAffirmation] = useState(false)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    {affirmation ? <>
+    <h1>I already knew it!!!</h1>
+    <div>
+      <button className='btn check_again_btn' onClick={()=> {setAffirmation(false);
+      setXCoordinate(50);setYCoordinate(0)}}>Want to check again?</button>
     </div>
-  );
+    </> :
+    <>
+    <h1>Are you dumb?</h1>
+      <button className='btn yes_btn' onClick={()=> setAffirmation(true)}>Yes</button>
+        <button className='btn no_btn' 
+          onClick={()=>{setYCoordinate(Math.floor(Math.random()*40) + 1);
+          setXCoordinate(Math.floor(Math.random()*68) + 16)}}
+          style={{transform: `translateX(-40px) translateX(${xCoordinate}vw) translateY(${yCoordinate}vh)`}}>No</button>
+    </>
+    }
+    </>   
+  )
 }
 
-export default App;
+export default App

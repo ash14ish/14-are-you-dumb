@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  box-sizing: border-box;
+}
+
+h1{
+  width: 100vw;
+  text-align: center;
+  margin: 7.5vw auto;
+  color: rgba(132, 0, 255);
+}
+
+.btn {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  line-height: 18px;
+  width: 80px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #F082AC;
+}
+
+.check_again_btn{
+  width: 170px;
+  padding: 12px 9px;
+}
+
+.check_again_btn, .yes_btn{
+  margin: auto;
+  display: block;
+  margin-bottom: 32px;
+}
+
+.no_btn{
+  position: absolute;
+  transition: 300ms ease-in-out;
+  display: block;
+}
+
